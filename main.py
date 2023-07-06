@@ -15,7 +15,7 @@ while True:
 
         guess = input("Guess a number:")
         while len(guess) != 3:
-            print("Too small! Must be 100-999")
+            print("Must be a number 100-999")
             guess = input("Guess a number: ")
 
         if guess == secret:
