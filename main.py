@@ -10,8 +10,6 @@ while True:
     secret = str(random.randint(100, 999))
 
     while turns_left > 0:
-        number_correct = 0
-        position_correct = 0
 
         guess = input("Guess a number:")
         while len(guess) != 3:
@@ -21,6 +19,9 @@ while True:
         if guess == secret:
             print("You got it!")
             break
+
+        number_correct = 0
+        position_correct = 0
 
         guess_list = []
         secret_list = []
@@ -39,6 +40,7 @@ while True:
 
         print("That guess got", position_correct, "numbers in the right position and", number_correct,
               "other correct numbers.")
+
         turns_left -= 1
 
     if turns_left == 0:
